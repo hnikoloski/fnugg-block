@@ -125,13 +125,21 @@ This is where we build the main block.
 
 from @wordpress/components are used for the sidebar settings.
 
+![Code Screenshot](./assets/readme/Screenshot_6.png)
+
+The `onChangeValue()` function is used to get call the `/suggest` endpoint and get the results for our autocomplete.
+
+We create new elements on the spot for the results. And we add a click event that will set the resortName attribute and call the `fetchResortData()` function.
+
+`fetchResortData()` function uses the `/search` endpoint to get the get the data for the resort and set it to the resortData attribute on our `<Card />` component.
+
 ```jsx
 <Card />
 ```
 
 `src/components/card.js` - The Card component is our main component. It is used in the editor and the frontend.
 
-![Code Screenshot](./assets/readme/Screenshot_6.png)
+![Code Screenshot](./assets/readme/Screenshot_7.png)
 
 We get the data from the props and use it to display the data.
 

@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 const Card = ({ data }) => {
     if (!data || data.length === 0) {
         return <>
@@ -21,6 +20,7 @@ const Card = ({ data }) => {
     let windSpeed = data.wind.mps
     let windDegree = data.wind.degree
     let slopesOpen = data.slopes
+
     let conditionIcons = [
         'clear-day',
         'brightness_4',
@@ -59,7 +59,7 @@ const Card = ({ data }) => {
                 <div className="fnugg-card__body__info wind">
                     <span class="material-symbols-outlined icon" style={
                         {
-                            transform: `rotate(${windDegree - 45}deg)`,
+                            transform: `rotate(${windDegree - 45}deg)`, // -45 because the icon is rotated 45deg by default
                         }
                     }>
                         near_me

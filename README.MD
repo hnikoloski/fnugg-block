@@ -108,6 +108,8 @@ The **resortData** attribute we use for for the data we get from the api.
 
 #### edit.js
 
+![Code Screenshot](./assets/readme/Screenshot_5.png)
+
 This is where we build the main block.
 
 ```jsx
@@ -116,6 +118,19 @@ This is where we build the main block.
 ```
 
 are used for the sidebar settings.
+
+```jsx
+<Card />
+```
+
+`src/components/card.js` - The Card component is our main component. It is used in the editor and the frontend.
+
+![Code Screenshot](./assets/readme/Screenshot_6.png)
+
+We get the data from the props and use it to display the data.
+If the data is invalid or empty we show a message.
+We pass the data in variables so we can manipulate it further if we need to.
+For the condition icons we get a nubmer from the api (1-9) and we use that to get the correct class name for the icon so we can use google fonts to display the icons.
 
 ## Demo
 

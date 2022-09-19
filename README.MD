@@ -110,7 +110,7 @@ The **resortData** attribute we use for for the data we get from the api.
 
 This is where we build the main block.
 
-```react
+```jsx
 <InspectorControls>
 <Panel>
 ```

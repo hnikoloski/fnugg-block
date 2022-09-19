@@ -5,7 +5,7 @@ Upload the plugins to the plugin directory. Or use the wp installer in the dashb
 ### General Use
 
 Add the Fnugg block in the editor.
-![App Screenshot](./assets/readme/Screenshot_2.png)
+![App Screenshot](./assets/readme/Screenshot_1.png)
 
 Search for a resort in the sidebar settings.
 ![App Screenshot](./assets/readme/Screenshot_2.png)

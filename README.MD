@@ -19,63 +19,63 @@ Click the one you want and.. Voilà Magic.
 #### Autocomplete
 
 ```http
-  GET /wp-json/mollie/v1/suggest
+  GET /wp-json/mollie/v1/suggest
 ```
 
-| Parameter | Type     | Description                 |
+| Parameter | Type     | Description                 |
 | :-------- | :------- | :-------------------------- |
-| `q`       | `string` | Resort Name. Or part of it. |
+| `q`       | `string` | Resort Name. Or part of it. |
 
 #### Get item
 
 ```http
-  GET /wp-json/mollie/v1/search
+  GET /wp-json/mollie/v1/search
 ```
 
-| Parameter | Type     | Description |
+| Parameter | Type     | Description |
 | :-------- | :------- | :---------- |
-| `q`       | `string` | Resort name |
+| `q`       | `string` | Resort name |
 
 ## Run Locally
 
 Using node version: 16.16.0
 
-If you have trouble installing use Node Version Manage (NVM).
+If you have trouble installing, use Node Version Manage (NVM).
 
 Clone the project
 
 ```bash
-  git clone https://github.com/hnikoloski/fnugg-block
+  git clone https://github.com/hnikoloski/fnugg-block
 ```
 
 Go to the project directory
 
 ```bash
-  cd fnugg-block
+  cd fnugg-block
 ```
 
 Install dependencies
 
 ```bash
-  npm install
+  npm install
 ```
 
 Development
 
 ```bash
-  npm run start
+  npm run start
 ```
 
 Build
 
 ```bash
-  npm run build
+  npm run build
 ```
 
 Create Zip
 
 ```bash
-  npm run zip
+  npm run zip
 ```
 
 ## Code Reference
@@ -92,13 +92,13 @@ Location: `includes/api/controllers/class-mollie-public-actions.php`
 
 We get the parameter from the request and add it to the transient key, so we can cache the results.
 
-We check if the transient exists, if it does we return it. If not we make a request to the fnugg api.
+We check if the transient exists, if it does, we return it. If not we make a request to the fnugg api.
 
-When we do the request we get only the name since that is what we need for the autocomplete.
+When we do the request, we get only the name, since that is what we need for the autocomplete.
 
-If there are errors we return them with 'fnugg_error' so we can further handle them.
+If there are errors, we return them with 'fnugg_error' so we can further handle them.
 
-If the request is successful we set the transient and return the results.
+If the request is successful, we set the transient and return the results.
 
 ![Code Screenshot](./assets/readme/Screenshot_4.png)
 
@@ -110,7 +110,7 @@ We use wpscripts to build the block.
 
 The **resortName** attribute we use for the autocomplete.
 
-The **resortData** attribute we use for for the data we get from the api.
+The **resortData** attribute we use for the data we get from the api.
 
 #### edit.js
 
@@ -131,7 +131,7 @@ The `onChangeValue()` function is used to get call the `/suggest` endpoint and g
 
 We create new elements on the spot for the results. And we add a click event that will set the resortName attribute and call the `fetchResortData()` function.
 
-`fetchResortData()` function uses the `/search` endpoint to get the get the data for the resort and set it to the resortData attribute on our `<Card />` component.
+`fetchResortData()` function uses the `/search` endpoint to get the data for the resort and set it to the resortData attribute on our `<Card />` component.
 
 ```jsx
 <Card />
@@ -143,11 +143,11 @@ We create new elements on the spot for the results. And we add a click event tha
 
 We get the data from the props and use it to display the data.
 
-If the data is invalid or empty we show a message.
+If the data is invalid or empty, we show a message.
 
-We pass the data in variables so we can manipulate it further if we need to.
+We pass the data in variables, so we can manipulate it further if we need to.
 
-For the condition icons we get a nubmer from the api (1-9) and we use that to get the correct class name for the icon so we can use google fonts to display the icons.
+For the condition icons we get a number from the api (1-9) and we use that to get the correct class name for the icon, so we can use Google fonts to display the icons.
 
 ## Demo
 

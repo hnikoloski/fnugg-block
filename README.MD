@@ -35,3 +35,45 @@ Click the one you want and.. Voilà Magic.
 | Parameter | Type     | Description |
 | :-------- | :------- | :---------- |
 | `q`       | `string` | Resort name |
+
+## Run Locally
+
+Using node version: 16.16.0
+
+If you have trouble installing use Node Version Manage (NVM).
+
+Clone the project
+
+```bash
+  git clone https://github.com/hnikoloski/fnugg-block
+```
+
+Go to the project directory
+
+```bash
+  cd fnugg-block
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Development
+
+```bash
+  npm run start
+```
+
+Build
+
+```bash
+  npm run build
+```
+
+Create Zip
+
+```bash
+  npm run zip
+```

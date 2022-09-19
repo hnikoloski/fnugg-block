@@ -51,7 +51,7 @@ class Mollie_Public_Actions
 		}
 
 		// If not in cache, get from fnugg and cache it
-		$response = wp_safe_remote_get(FNUGG_URL . "/suggest/autocomplete?q=$q");
+		$response = wp_remote_get(FNUGG_URL . "/suggest/autocomplete?q=$q");
 
 
 		if (isset($response['body'])) {
@@ -60,7 +60,7 @@ class Mollie_Public_Actions
 		}
 
 		if (!$data) {
-			return new WP_Error('fnugg_error', 'Nothing found.', array('status' => 200)); //200 because console error is annoying.
+			return new WP_Error('fnugg_error', 'Nothing found.', array('status' => 200));
 		}
 
 		// Cache the result
@@ -69,7 +69,6 @@ class Mollie_Public_Actions
 
 		$result = new WP_REST_Response($data, 200);
 
-		// Set headers.
 		return $result;
 	}
 	// Fnugg Search

@@ -27,8 +27,7 @@ define('MOLLIE_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('MOLLIE_API_NAMESPACE', 'mollie/v1');
 define('MOLLIE_PLUGIN_FILE', __FILE__);
 define('FNUGG_URL', 'https://api.fnugg.no');
-// define('CACHE_TIME', 86400);
-define('CACHE_TIME', 1);
+define('CACHE_TIME', 86400);
 
 
 

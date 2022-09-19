@@ -75,14 +75,7 @@ class Mollie_Api_Routes
 			}
 		));
 
-		// Clear cache
-		register_rest_route($this->namespace, '/clear-cache', array(
-			self::METHOD => WP_REST_Server::READABLE,
-			self::CALLBACK => [new Mollie_Public_Actions(), 'clearCache'],
-			self::PERMISSION_CALLBACK => function () {
-				return true;
-			}
-		));
+
 
 		/**********  POST Routes  **********/
 	}

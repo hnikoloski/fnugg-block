@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-components/
  */
-import { TextControl, Panel, PanelBody, PanelRow } from '@wordpress/components';
+import { TextControl, Panel, PanelBody } from '@wordpress/components';
 import Card from './components/card';
 
 /**

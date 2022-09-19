@@ -91,9 +91,13 @@ Location: `includes/api/class-mollie-api-routes.php`
 Location: `includes/api/controllers/class-mollie-public-actions.php`
 
 We get the parameter from the request and add it to the transient key, so we can cache the results.
+
 We check if the transient exists, if it does we return it. If not we make a request to the fnugg api.
+
 When we do the request we get only the name since that is what we need for the autocomplete.
+
 If there are errors we return them with 'fnugg_error' so we can further handle them.
+
 If the request is successful we set the transient and return the results.
 
 ![Code Screenshot](./assets/readme/Screenshot_4.png)
@@ -103,7 +107,9 @@ If the request is successful we set the transient and return the results.
 We use wpscripts to build the block.
 
 `src/block.json` contains our block settings and attributes.
+
 The **resortName** attribute we use for the autocomplete.
+
 The **resortData** attribute we use for for the data we get from the api.
 
 #### edit.js
@@ -117,7 +123,7 @@ This is where we build the main block.
 <Panel>
 ```
 
-are used for the sidebar settings.
+from @wordpress/components are used for the sidebar settings.
 
 ```jsx
 <Card />
@@ -128,8 +134,11 @@ are used for the sidebar settings.
 ![Code Screenshot](./assets/readme/Screenshot_6.png)
 
 We get the data from the props and use it to display the data.
+
 If the data is invalid or empty we show a message.
+
 We pass the data in variables so we can manipulate it further if we need to.
+
 For the condition icons we get a nubmer from the api (1-9) and we use that to get the correct class name for the icon so we can use google fonts to display the icons.
 
 ## Demo

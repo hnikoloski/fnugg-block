@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/fnugg-block",
+	"version": "0.1.0",
+	"title": "Fnugg Block",
+	"category": "text",
+	"icon": "flag",
+	"description": "A Gutenberg block to display weather data from fnugg.no",
+	"keywords": [
+		"fnugg",
+		"weather",
+		"forecast",
+		"mollie"
+	],
+	"attributes": {
+		"resortName": {
+			"type": "string",
+			"default": [],
+			"selector": "#fnugg-search"
+		},
+		"resortData": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "fnugg-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
